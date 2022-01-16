@@ -8,6 +8,7 @@ Then, Chef calculates the number of pips on the visible faces of all dice in the
 
 Now, he is wondering: among all possible arrangements of dice, what is the maximum possible total number of visible pips? Since he is busy cooking, he is asking you to solve this.
 
+
 INPUT:
 
 The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
@@ -17,6 +18,12 @@ The first and only line of each test case contains a single integer N.
 OUTPUT:
 
 For each test case, print a single line containing one integer ― the maximum possible number of visible pips.
+
+Constraints:
+
+1≤T≤105
+
+1≤N≤1012
 
 
 #include <iostream>
