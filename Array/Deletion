@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[50];
+    int n,pos;//declaration of size and position at which element is to be deleted 
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];//array elements
+    }
+    cin>>pos;
+    for(int i=pos;i<n;i++)
+    {
+        a[i-1]=a[i];//shifting of elements (towards left) 
+    }
+    n--;//decrease size by 1
+    if(pos<=0 || pos>n)
+    {
+        cout<<"Invalid position!!"<<"\n";
+    }
+    else
+    {
+    cout<<"After Deletion"<<"\n";
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }  
+    
+    }
+    
+    return 0;
+}
