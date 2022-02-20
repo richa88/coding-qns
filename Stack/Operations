@@ -1,0 +1,69 @@
+#include <iostream>
+
+using namespace std;
+
+#define MAX 5
+int stack[MAX];
+int top=-1;
+
+void push(int ele)
+{
+    if(top==MAX-1)
+    {
+        cout<<"Stack Overflow!!"<<"\n";
+    }
+    else
+    {
+        top++;
+        stack[top]=ele;
+    }
+}
+void pop()
+{   
+    int val;
+    
+    if(top==-1)
+    {
+        cout<<"Stack Underflow!!"<<"\n";
+    }
+    else
+    {
+        val=stack[top];
+        top--;
+        cout<<"Deleted element is:"<<val<<"\n";
+    }
+}
+
+void transverse()
+{
+    if(top==-1)
+    {
+        cout<<"Stack Underflow!No elements to display!!"<<"\n";
+    }
+    else
+    {
+        int k=top;
+        while(k>=0)
+        {
+            cout<<stack[k]<<"\t";
+            k--;
+        }
+        cout<<"\n";
+    }
+}
+
+int main()
+{
+    int element;
+    for(int i=0;i<5;i++)
+    {
+    cin>>element;
+    push(element);
+    }
+    transverse();
+    pop();
+    pop();
+    transverse();
+
+    return 0;
+}
